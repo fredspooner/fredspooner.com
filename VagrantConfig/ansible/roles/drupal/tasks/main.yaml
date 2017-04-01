@@ -1,0 +1,10 @@
+
+- name: Run composer - this takes a while!
+  shell: "composer create-project drupal-composer/drupal-project:8.x-dev /var/www/drupal8 --stability dev --no-interaction"
+
+- name: Move Drupal source
+  command: "mv /var/www/drupal8/* /var/www/drupal8/.[!.]* /var/www/vagrant"
+
+- name: Do an rsync back
+  command: "vagrant rsync-back"
+  delegate_to: 127.0.0.1
