@@ -35,10 +35,10 @@ VagrantConfig = {
   },
   php: {
     extra_packages: [
-      "php-gd",
-      "php-opcache",
-      "php-curl",
-      "php-mysql"
+      "php7.0-gd",
+      "php7.0-opcache",
+      "php7.0-curl",
+      "php7.0-mysql"
     ],
   }
 }
