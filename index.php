@@ -12,13 +12,6 @@ $uipaths = [
 
 $f3->set('UI', implode(',', $uipaths));
 
-
-$f3->route('GET @home: /', function($f3, $params) {
-    echo \Template::instance()->render('index.html');
-});
-
-$f3->route('GET @portfolio: /portfolio/@type', function($f3, $params) {
-    print_r($f3->get('PARAMS.type'));
-});
+require_once('config/routes.inc');
 
 $f3->run();
